@@ -1,0 +1,8 @@
+@use "./font";
+
+$purple: #8519ff;
+
+body {
+  background-color: $purple;
+  color: white;
+}
