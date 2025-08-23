@@ -36,7 +36,6 @@
     </ul>
 </nav>
 
-<h1 class="typewrite" data-speed="50" data-delay="3000" data-cursor="true" data-texts='[ "7.77★ bpm 200 combo 2680 ar 9.8 cs 4.4 od 9.8 hp 5"]'></h1>
 
 <div class="content flex w-full flex-1 max-w-[100rem] mx-auto px-4">
 
@@ -45,9 +44,16 @@
             Easily pick your next beatmap with<br>More Beatmaps Info</h1>
 
         <div class="w-1/2 flex justify-end items-start">
-            <div class="w-[100%] h-[50%] translate-y-20 ds-bg-red-400">
-                <img class="translate-x-[13%] translate-y-[70%] rotate-13 w-[80%]"
-                     src="src/assets/images/beatmap-card.png" alt="Beatmapset card">
+            <div class="w-[100%] h-[50%] translate-y-20 ds-bg-red-400 relative">
+                <div class="relative inline-block w-[95%] mt-[10%]">
+                    <img class="w-full rotate-13" src="src/assets/images/beatmap-card.png" alt="Beatmapset card">
+
+                    <h1 class="relative text-responsive -translate-y-[95.7%] translate-x-[20.2%] rotate-13 text-white typewrite"
+                        data-speed="30" data-delay="3000" data-cursor="false"
+                        data-texts='["6.67★ bpm 186 combo 2465 ar 9.7 cs 4.2 od 9 hp 5"]'>
+                    </h1>
+                </div>
+
             </div>
         </div>
     </div>
