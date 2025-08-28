@@ -7,8 +7,8 @@ class TypeWriter {
         this.currentText = '';                         //Current text being typed
         this.texts = texts;                            //Array of texts to be typed
 
-        this.speed = parseInt(speed, 10) || 50;        //Speed of typing and removing in ms
-        this.delay = parseInt(delay, 10);              //How long to wait between removing typing each text
+        this.speed = parseInt(speed, 10) || 50;   //Speed of typing and removing in ms
+        this.delay = parseInt(delay, 10);         //How long to wait between removing typing each text
 
         this.typeNext();                               //Start typing
     }
@@ -44,7 +44,7 @@ class TypeWriter {
     }
 
     updateElement() {
-        this.element.innerHTML = this.currentText;
+        this.element.innerHTML = this.currentText || '&nbsp;';
     }
 }
 
