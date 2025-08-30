@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <title>More Beatmaps Info</title>
     <link href="/src/styles/css/main.css" rel="stylesheet">
@@ -23,7 +23,7 @@
             <button id="menu-btn" class="focus:outline-none">
                 <svg class="w-6 h-6" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M4 6h16M4 12h16M4 18h16" />
+                          d="M4 6h16M4 12h16M4 18h16"/>
                 </svg>
             </button>
         </div>
@@ -36,39 +36,40 @@
     </ul>
 </nav>
 
-<div class="card-stack relative inline-block w-[30%] mt-[10%] h-full"
-     data-switch-time="5000" data-animation-time="2000">
-    <img class="card -rotate-11 w-full select-none opacity-95 transition-transform duration-700 ease-in-out"
-         src="src/assets/images/beatmap-card.png" alt="Beatmapset card">
-    <img class="card -rotate-11 w-full select-none opacity-95 transition-transform duration-700 ease-in-out"
-         src="src/assets/images/beatmap-card2.png" alt="Beatmapset card">
-    <img class="card -rotate-11 w-full select-none opacity-95 transition-transform duration-700 ease-in-out"
-         src="src/assets/images/beatmap-card3.png" alt="Beatmapset card">
+
+<div id="content-top" class="w-full flex flex-row">
+    <h1 class="typewrite w-1/2 font-bold mt-35 text-7xl" data-speed="50" data-delay="5000000" data-cursor="false"
+        data-texts='["Easily pick your next beatmap with More Beatmaps Info"]'>
+    </h1>
+
+    <div class="w-1/2 flex justify-end items-start">
+        <div class="w-[100%] h-[50%] translate-y-20 ds-bg-red-400 relative">
+            <div id="cards-animated-block" class="rotate-10 w-[95%] mt-[10%]">
+                <div class="card-stack relative inline-block w-[90%] h-full"
+                     data-switch-time="5105" data-animation-time="2000">
+                    <img class="card w-full select-none opacity-95 transition-transform duration-700 ease-in-out"
+                         src="src/assets/images/beatmap-card.png" alt="Beatmapset card">
+                    <img class="card w-full select-none opacity-95 transition-transform duration-700 ease-in-out"
+                         src="src/assets/images/beatmap-card2.png" alt="Beatmapset card">
+                    <img class="card w-full select-none opacity-95 transition-transform duration-700 ease-in-out"
+                         src="src/assets/images/beatmap-card3.png" alt="Beatmapset card">
+                </div>
+
+                <h1 class="text-responsive z-50 translate-y-[370%] translate-x-[19.2%] text-white typewrite"
+                    data-delay="3250"
+                    data-speed="8" data-cursor="false"
+                    data-texts='["6.67★ bpm 186 combo 2465 ar 9.7 cs 4.2 od 9 hp 5",
+                                "7.83★ bpm 230 combo 610 ar 9.8 cs 4 od 9.8 hp 4.5",
+                                "7.42★ bpm 184 combo 3845 ar 9.6 cs 4.2 od 10 hp 5"]'>
+
+                </h1>
+            </div>
+
+        </div>
+    </div>
 </div>
 
-<!--    <div id="content-top"  class="w-full flex flex-row">-->
-<!--        <h1 class="typewrite w-1/2 font-bold mt-35 text-7xl" data-speed="50" data-delay="5000000" data-cursor="false"-->
-<!--            data-texts='["Easily pick your next beatmap with More Beatmaps Info"]'>-->
-<!--            </h1>-->
-
-<!--        <div class="w-1/2 flex justify-end items-start">-->
-<!--            <div class="w-[100%] h-[50%] translate-y-20 ds-bg-red-400 relative">-->
-<!--                <div class="relative inline-block w-[95%] mt-[10%]">-->
-<!--                    <img class="w-full rotate-11 select-none opacity-95" draggable="false" src="src/assets/images/beatmap-card.png" alt="Beatmapset card">-->
-
-<!--                    <h1 class="relative text-responsive -translate-y-[130%] translate-x-[19.8%] rotate-11 text-white typewrite"-->
-<!--                        data-speed="30" data-delay="3000" data-cursor="false"-->
-<!--                        data-texts='["6.67★ bpm 186 combo 2465 ar 9.7 cs 4.2 od 9 hp 5"]'>-->
-<!--                    </h1>-->
-<!--                </div>-->
-
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
-
 </body>
-<script type="module" src="/src/js/typeTextAnimator.js"></script>
 <script>
     const btn = document.getElementById('menu-btn');
     const menu = document.getElementById('mobile-menu');
@@ -79,7 +80,7 @@
 </script>
 
 <script type="module" src="/src/js/main.js"></script>
-<script type="module" src="/src/js/imageSwitcherAnimator.js"></script>
+<script type="module" src="/src/js/beatmapCardsAnimationManager.js"></script>
 
 
 <script>
