@@ -1,9 +1,7 @@
 @import "tailwindcss";
 
 @layer utilities {
-    @media (max-width: 1920px) {
-        .text-responsive {
-            font-size: 0.95vw;
-        }
+    .text-responsive {
+        font-size: 1.1vw;
     }
 }
