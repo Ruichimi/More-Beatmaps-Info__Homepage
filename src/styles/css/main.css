@@ -1,7 +1,12 @@
 @import "tailwindcss";
 
 @layer utilities {
-    .text-responsive {
-        font-size: 1.1vw;
-    }
+}
+
+.typewrite-cards {
+    backface-visibility: hidden;
+}
+
+#pp-text {
+    backface-visibility: hidden;
 }

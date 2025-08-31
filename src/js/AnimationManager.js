@@ -4,7 +4,8 @@ import TypeWriter from "@/js/typeTextAnimator.js";
 class AnimationManager {
     constructor() {
         this.currentCardsAnimInstance = null;
-        this.currentTypeWriterInstance = null;
+        this.currentTypeWriterInstanceInfo = null;
+        this.currentTypeWriterInstancePP = null;
         this.currentBlock = null;
     }
 
@@ -13,7 +14,8 @@ class AnimationManager {
 
         this.currentBlock = document.getElementById("cards-animated-block");
         this.cardStacksInit(this.currentBlock);
-        this.animateCardsTexts(this.currentBlock, 'typewrite-cards');
+        this.animateCardsTexts(this.currentBlock);
+        this.animateCardsPPTexts(this.currentBlock);
 
         this.resetCardsAnimationsInterval();
     }
@@ -26,7 +28,8 @@ class AnimationManager {
             const newBlock = this.resetBlock();
 
             this.cardStacksInit(newBlock);
-            this.animateCardsTexts(newBlock, 'typewrite-cards');
+            this.animateCardsTexts(newBlock);
+            this.animateCardsPPTexts(newBlock);
         }, 31300);
     }
 
@@ -64,8 +67,16 @@ class AnimationManager {
     animateCardsTexts(container) {
         this.getElementsForTypeAnimation(container, 'typewrite-cards',
             (element) => {
-                if (this.currentTypeWriterInstance) this.currentTypeWriterInstance.stop();
-                this.currentTypeWriterInstance = new TypeWriter(element);
+                if (this.currentTypeWriterInstanceInfo) this.currentTypeWriterInstanceInfo.stop();
+                this.currentTypeWriterInstanceInfo = new TypeWriter(element);
+            })
+    }
+
+    animateCardsPPTexts(container) {
+        this.getElementsForTypeAnimation(container, 'typewrite-pp',
+            (element) => {
+                if (this.currentTypeWriterInstancePP) this.currentTypeWriterInstancePP.stop();
+                this.currentTypeWriterInstancePP = new TypeWriter(element);
             })
     }
 

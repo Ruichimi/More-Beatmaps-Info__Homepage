@@ -5,6 +5,17 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'TorusPro';
+  src: url('@assets/fonts/Fontspring-DEMO-toruspro-semibold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#pp-text {
+  font-family: 'TorusPro', sans-serif;
+}
+
 body {
   font-family: "Fredoka", sans-serif;
 }
