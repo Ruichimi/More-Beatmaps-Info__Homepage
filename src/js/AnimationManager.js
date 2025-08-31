@@ -1,18 +1,19 @@
 import ImageSwitcherAnimator from "@/js/imageSwitcherAnimator.js";
 import TypeWriter from "@/js/typeTextAnimator.js";
 
-class BeatmapCardsAnimationManager {
+class AnimationManager {
     constructor() {
         this.currentAnimInstance = null;
         this.currentTypeWriterInstance = null;
-
         this.currentBlock = null;
     }
 
     init() {
+        this.enableTypeAnimation();
+
         this.currentBlock = document.getElementById("cards-animated-block");
         this.cardStacksInit(this.currentBlock);
-        this.typeAnimInit(this.currentBlock);
+        this.animateCardsTexts(this.currentBlock, 'typewrite-cards');
 
         setInterval(() => {
             if (!this.currentBlock) return;
@@ -27,7 +28,7 @@ class BeatmapCardsAnimationManager {
                 parent.appendChild(newBlock);
 
                 this.cardStacksInit( newBlock);
-                this.typeAnimInit(newBlock);
+                this.animateCardsTexts(newBlock, 'typewrite-cards');
 
                 this.currentBlock = newBlock;
             }, 5);
@@ -47,26 +48,36 @@ class BeatmapCardsAnimationManager {
         });
     };
 
-    typeAnimInit(container) {
-        const elements = container.getElementsByClassName('typewrite');
+    getElementAndItsParamsForTypeAnimation(container = document, className = 'typewrite', callback) {
+        const elements = container.getElementsByClassName(className);
 
         Array.from(elements).forEach(element => {
             const texts = element.getAttribute('data-texts');
             const delay = element.getAttribute('data-delay');
             const speed = element.getAttribute('data-speed');
             const cursorAttr = element.getAttribute('data-cursor');
-
             const showCursor = cursorAttr !== 'false';
-            if (showCursor) element.style.borderRight = '0.08em solid #fff';
 
             if (texts) {
-                if (this.currentTypeWriterInstance) this.currentTypeWriterInstance.stop();
-                this.currentTypeWriterInstance =
-                    new TypeWriter(element, JSON.parse(texts), speed, delay, showCursor);
+                callback(element, JSON.parse(texts), speed, delay, showCursor);
             }
         });
-    };
+    }
+
+    animateCardsTexts(container) {
+        this.getElementAndItsParamsForTypeAnimation(container, 'typewrite-cards',
+            (element, texts, speed, delay, showCursor) => {
+                if (this.currentTypeWriterInstance) this.currentTypeWriterInstance.stop();
+            this.currentTypeWriterInstance = new TypeWriter(element, texts, speed, delay, showCursor);
+        })
+    }
+
+    enableTypeAnimation() {
+        this.getElementAndItsParamsForTypeAnimation(document, 'typewrite', (element, texts, speed, delay, showCursor) => {
+            new TypeWriter(element, texts, speed, delay, showCursor);
+        });
+    }
 }
 document.addEventListener("DOMContentLoaded", () => {
-    new BeatmapCardsAnimationManager().init();
+    new AnimationManager().init();
 });

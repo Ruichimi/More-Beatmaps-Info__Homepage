@@ -1,7 +1,7 @@
 // Rewritten version of the code from https://codepen.io/hi-im-si/pen/ALgzqo
 
 class TypeWriter {
-    constructor(element, texts, speed, delay = 2000) {
+    constructor(element, texts, speed = 15, delay = 2000, showCursor = true) {
         this.element = element;                        //DOM element with text
         this.currentIndex = 0;                         //Index of the current text being typed
         this.currentText = '';                         //Current text being typed
@@ -11,6 +11,8 @@ class TypeWriter {
         this.delay = parseInt(delay, 10);         //How long to wait between removing typing each text
 
         this.timeoutId = null;
+
+        this.enableTextCursorIfNeeded(showCursor);
 
         this.typeNext();                               //Start typing
     }
@@ -51,6 +53,12 @@ class TypeWriter {
 
     updateElement() {
         this.element.innerHTML = this.currentText || '&nbsp;';
+    }
+
+    enableTextCursorIfNeeded(showCursor) {
+        console.log('meow', showCursor);
+        console.log(this.element);
+        if (showCursor) this.element.style.border = '0.08em solid #fff';
     }
 
     clearTimeoutIfExists() {
