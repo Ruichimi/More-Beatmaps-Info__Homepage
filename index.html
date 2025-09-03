@@ -46,8 +46,21 @@
 
     <div id="content-right" class="w-1/2  flex justify-end items-start">
         <div class="w-[100%] h-[50%] ds-bg-red-400 relative">
-            <div id="cards-animated-block" class="rotate-10 w-[95%] mt-[25%]">
-                <div class="card-stack w-[90%] h-full"
+            <div id="cards-animated-block" class="rotate-10 w-[95%] mt-[30%]">
+
+                <div class="card-stack w-full h-full absolute z-10 bottom-[200%]" data-switch-time="5105" data-animation-time="2000">
+                    <div class="card deep-info-block left-1/2 -translate-x-1/2 font-bold text-[1vw] inline-block whitespace-nowrap rounded-[1vw] border-white border-[0.2vw]">
+                        Aim diff: 3.3, Speed diff: 3.0, Circles: 1526, Sliders: 438, Speed note count: 1338.5, FL Diff: 4.29
+                    </div>
+                    <div class="card deep-info-block left-1/2 -translate-x-1/2 font-bold text-[1vw] inline-block whitespace-nowrap rounded-[1vw] border-white border-[0.2vw]">
+                        Aim diff: 4.4, Speed diff: 2.6, Circles: 353, Sliders: 128, Speed note count: 386.2, FL Diff: 3.33
+                    </div>
+                    <div class="card deep-info-block left-1/2 -translate-x-1/2 font-bold text-[1vw] inline-block whitespace-nowrap rounded-[1vw] border-white border-[0.2vw]">
+                        Aim diff: 3.5, Speed diff: 3.5, Circles: 2232, Sliders: 604, Speed note count: 1123.4, FL Diff: 5.00
+                    </div>
+                </div>
+
+                <div class="card-stack w-[90%] h-full "
                      data-switch-time="5105" data-animation-time="2000">
                     <img class="card w-full select-none opacity-95 transition-transform duration-700 ease-in-out"
                          src="src/assets/images/beatmap-card.png" alt="Beatmapset card">
@@ -57,7 +70,7 @@
                          src="src/assets/images/beatmap-card3.png" alt="Beatmapset card">
                 </div>
 
-                <h1 class="typewrite-pp text-[1.6vw] absolute left-[85%] top-[30%] text-responsive max-w-[60%]
+                <h1 class="typewrite-cards text-[1.6vw] absolute left-[85%] top-[30%] text-responsive max-w-[60%]
                  z-50  text-white" id="pp-text"
                     data-delay="3850"
                     data-speed="120" data-cursor="false"
@@ -90,9 +103,4 @@
 
 <script type="module" src="/src/js/main.js"></script>
 <script type="module" src="/src/js/AnimationManager.js"></script>
-
-
-<script>
-</script>
-
 </html>

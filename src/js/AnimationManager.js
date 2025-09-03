@@ -3,9 +3,8 @@ import TypeWriter from "@/js/typeTextAnimator.js";
 
 class AnimationManager {
     constructor() {
-        this.currentCardsAnimInstance = null;
-        this.currentTypeWriterInstanceInfo = null;
-        this.currentTypeWriterInstancePP = null;
+        this.cardAnimInstances = [];
+        this.currentTypeWriterInstances = [];
         this.currentBlock = null;
     }
 
@@ -15,7 +14,6 @@ class AnimationManager {
         this.currentBlock = document.getElementById("cards-animated-block");
         this.cardStacksInit(this.currentBlock);
         this.animateCardsTexts(this.currentBlock);
-        this.animateCardsPPTexts(this.currentBlock);
 
         this.resetCardsAnimationsInterval();
     }
@@ -23,13 +21,14 @@ class AnimationManager {
     resetCardsAnimationsInterval() {
         setInterval(() => {
             if (!this.currentBlock) return;
-            if (this.currentCardsAnimInstance) this.currentCardsAnimInstance.resetStyles();
+
+            // сброс всех анимаций карточек
+            this.cardAnimInstances.forEach(anim => anim.resetStyles());
 
             const newBlock = this.resetBlock();
 
             this.cardStacksInit(newBlock);
             this.animateCardsTexts(newBlock);
-            this.animateCardsPPTexts(newBlock);
         }, 31300);
     }
 
@@ -47,37 +46,34 @@ class AnimationManager {
     cardStacksInit(container) {
         const cardStacks = container.querySelectorAll(".card-stack");
 
+        // очищаем старые анимации
+        this.cardAnimInstances.forEach(anim => anim.stop());
+        this.cardAnimInstances = [];
+
         cardStacks.forEach(cardStack => {
             let switchTime = parseFloat(cardStack.getAttribute('data-switch-time')) || 5000;
             let animationTime = parseFloat(cardStack.getAttribute('data-animation-time')) || 2000;
 
-            if (this.currentCardsAnimInstance) this.currentCardsAnimInstance.stop();
-            this.currentCardsAnimInstance = new ImageSwitcherAnimator(cardStack, switchTime, animationTime);
+            const animInstance = new ImageSwitcherAnimator(cardStack, switchTime, animationTime);
+            this.cardAnimInstances.push(animInstance);
         });
-    };
+    }
 
     getElementsForTypeAnimation(container = document, className = 'typewrite', callback) {
         const elements = container.getElementsByClassName(className);
-
-        Array.from(elements).forEach(element => {
-            callback(element);
-        });
+        Array.from(elements).forEach(element => callback(element));
     }
 
     animateCardsTexts(container) {
-        this.getElementsForTypeAnimation(container, 'typewrite-cards',
-            (element) => {
-                if (this.currentTypeWriterInstanceInfo) this.currentTypeWriterInstanceInfo.stop();
-                this.currentTypeWriterInstanceInfo = new TypeWriter(element);
-            })
-    }
+        this.getElementsForTypeAnimation(container, 'typewrite-cards', (element) => {
+            const existingIndex = this.currentTypeWriterInstances.findIndex(inst => inst.element === element);
+            if (existingIndex !== -1) {
+                this.currentTypeWriterInstances[existingIndex].stop();
+                this.currentTypeWriterInstances.splice(existingIndex, 1);
+            }
 
-    animateCardsPPTexts(container) {
-        this.getElementsForTypeAnimation(container, 'typewrite-pp',
-            (element) => {
-                if (this.currentTypeWriterInstancePP) this.currentTypeWriterInstancePP.stop();
-                this.currentTypeWriterInstancePP = new TypeWriter(element);
-            })
+            this.currentTypeWriterInstances.push(new TypeWriter(element));
+        });
     }
 
     enableTypeAnimation() {
@@ -90,3 +86,4 @@ class AnimationManager {
 document.addEventListener("DOMContentLoaded", () => {
     new AnimationManager().init();
 });
+

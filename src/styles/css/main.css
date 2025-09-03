@@ -10,3 +10,7 @@
 #pp-text {
     backface-visibility: hidden;
 }
+.deep-info-block {
+    background: linear-gradient(180deg,#7c35fd,#9039f4,#a323ee);
+    padding: 0.595vw 0.893vw;
+}
