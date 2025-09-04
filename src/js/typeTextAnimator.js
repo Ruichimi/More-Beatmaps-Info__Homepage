@@ -27,9 +27,33 @@ class TypeWriter {
         this.showCursor = element.getAttribute('data-cursor') !== 'false';
     }
 
+    parseText(htmlString) {
+        const parts = [];
+        let i = 0;
+
+        while (i < htmlString.length) {
+            if (htmlString[i] === '<') {
+                const tagEnd = htmlString.indexOf('>', i);
+                if (tagEnd !== -1) {
+                    parts.push(htmlString.substring(i, tagEnd + 1));
+                    i = tagEnd + 1;
+                } else {
+                    parts.push(htmlString[i]);
+                    i++;
+                }
+            } else {
+                parts.push(htmlString[i]);
+                i++;
+            }
+        }
+
+        return parts;
+    }
+
     typeNext() {
         const fullText = this.texts[this.currentIndex % this.texts.length];
-        this.addText(fullText, () => {
+        this.textParts = this.parseText(fullText);
+        this.addText(() => {
             setTimeout(() => {
                 this.removeText(() => {
                     this.currentIndex++;
@@ -39,18 +63,22 @@ class TypeWriter {
         });
     }
 
-    addText(fullText, callback) {
+    addText(callback) {
         this.cancelAnimationIfExists();
         this.lastTime = performance.now();
+        let partIndex = 0;
 
         const step = (now) => {
             if (now - this.lastTime >= this.speed) {
-                this.currentText = fullText.substring(0, this.currentText.length + 1);
-                this.updateElement();
-                this.lastTime = now;
+                if (partIndex < this.textParts.length) {
+                    this.currentText += this.textParts[partIndex];
+                    partIndex++;
+                    this.updateElement();
+                    this.lastTime = now;
+                }
             }
 
-            if (this.currentText.length < fullText.length) {
+            if (partIndex < this.textParts.length) {
                 this.rafId = requestAnimationFrame(step);
             } else if (callback) {
                 callback();
@@ -66,12 +94,13 @@ class TypeWriter {
 
         const step = (now) => {
             if (now - this.lastTime >= this.speed / 3) {
-                this.currentText = this.currentText.substring(0, this.currentText.length - 1);
+                this.textParts.pop();
+                this.currentText = this.textParts.join('');
                 this.updateElement();
                 this.lastTime = now;
             }
 
-            if (this.currentText.length > 0) {
+            if (this.textParts.length > 0) {
                 this.rafId = requestAnimationFrame(step);
             } else if (callback) {
                 callback();
