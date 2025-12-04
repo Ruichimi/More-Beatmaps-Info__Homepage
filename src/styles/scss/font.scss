@@ -12,6 +12,28 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'FredokaBold';
+  src: url('@assets/fonts/Fredoka-Bold.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-fredokaBold {
+  font-family: 'FredokaBold', sans-serif;
+}
+
+@font-face {
+  font-family: 'AlanSans';
+  src: url('@assets/fonts/AlanSans-SemiBold.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-alansans {
+  font-family: 'AlanSans', sans-serif;
+}
+
 #pp-text {
   font-family: 'TorusPro', sans-serif;
 }

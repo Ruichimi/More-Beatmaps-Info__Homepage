@@ -8,47 +8,50 @@
     <link href="/src/styles/css/main.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-<body class="text-white bg-[#3c0266] w-screen min-h-screen flex flex-col">
 
-<div class="w-full px-[12%]">
-    <nav class="w-full flex items-start mt-3">
-        <div class="bg-[#271e46] rounded-full p-2 rounded-tr-none border-2 border-pink-500
-         relative left-[0.1rem] md:block md:left-0" id="navbar-logo">
-            <img src="/src/assets/images/logo.png" width="70" height="70" alt="">
+<body class="text-white bg-[#210138] w-screen min-h-screen flex flex-col">
+
+<div class="w-full flex justify-center">
+    <nav class="w-[80%] flex items-start mt-2">
+        <div class="p-[10px] bg-[#181333] relative rounded-full rounded-tr-none border-[3px] border-pink-500"
+             id="navbar-logo">
+            <img src="/src/assets/images/logo.png" width="84" height="84" alt="logo">
         </div>
         <div id="navbar-bar"
-             class="w-full bg-[#271e46] rounded-[30px] rounded-tl-none rounded-bl-none border-2 border-l-0
-                     relative right-[0.125rem] flex justify-end px-3 py-2 border-pink-500 relative">
+             class="flex-1 flex bg-[#181333] rounded-[30px] rounded-tl-none rounded-bl-none border-[3px] border-l-0 border-pink-500">
+            <div id="border-hider" class="self-stretch relative w-[3px] right-[3px] bg-[#181333] z-100 "></div>
+            <div class="w-full h-full flex justify-end items-center px-3 py-[12px]">
+                <ul class="hidden md:flex space-x-6 items-center mr-3">
+                    <li><a href="#" class="hover:text-gray-300 text-xl">Contact</a></li>
+                    <li><a href="#" class="hover:text-gray-300 text-xl">Privacy</a></li>
+                    <li><a href="#" class="hover:text-gray-300 text-xl">Feedback</a></li>
+                </ul>
 
-            <ul class="hidden md:flex space-x-6 flex items-center">
-                <li><a href="#" class="hover:text-gray-300">Contact</a></li>
-                <li><a href="#" class="hover:text-gray-300">Privacy</a></li>
-                <li><a href="#" class="hover:text-gray-300">Feedback</a></li>
-            </ul>
+                <ul class="hidden flex-col mx-auto rounded-[20px] bg-[#181333]" id="mobile-menu">
+                    <li><a href="#" class="block px-4 py-2 hover:bg-[#271e46] rounded">Contact</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-[#271e46] rounded">Privacy</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-[#271e46] rounded">Feedback</a></li>
+                </ul>
 
-            <ul class="hidden flex-col space-y-2 left-1/2 transform -translate-x-1/2
-                      bg-[#271e46] rounded-[20px] border-pink-500" id="mobile-menu">
-                <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 rounded">Contact</a></li>
-                <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 rounded">Privacy</a></li>
-                <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 rounded">Feedback</a></li>
-            </ul>
-
-            <div class="md:hidden">
-                <button id="menu-btn" class="focus:outline-none">
-                    <svg class="w-6 h-6" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M4 6h16M4 12h16M4 18h16"/>
-                    </svg>
-                </button>
+                <div class="md:hidden flex justify-center">
+                    <button id="menu-btn" class="focus:outline-none">
+                        <svg class="w-6 h-6" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
+
     </nav>
 </div>
 
 <main class="w-full h-full">
     <div id="content-top" class="w-full flex flex-row h-[60vh]">
-        <div id="content-left" class="w-1/2">
+        <div id="content-left" class="w-1/2 z-1">
             <h1 class="typewrite mt-[15%] ml-[8%] w-[90%] leading-[1] text-[4.5vw] font-bold"
+                style="text-shadow: 0 0 20px rgba(168,85,247,0.6);"
                 data-speed="50" data-delay="5000" data-cursor="false"
                 data-texts='["Easily pick your next beatmap with<br>More Beatmaps Info",
                          "Count the PP you’d get for the SS rank",
@@ -76,7 +79,8 @@
                         </div>
                     </div>
 
-                    <div class="card-stack w-[90%] h-full "
+                    <div class="card-stack w-[90%] h-full z-100"
+                         style="box-shadow: 3vw 5vw 9vw 4vw rgba(168,85,247,0.6);"
                          data-switch-time="5105" data-animation-time="2000">
                         <img class="card w-full select-none opacity-95 transition-transform duration-700 ease-in-out"
                              src="src/assets/images/beatmap-card.png" alt="Beatmapset card">
