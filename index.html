@@ -47,10 +47,10 @@
     </nav>
 </div>
 
-<main class="w-full h-full">
-    <div id="content-top" class="w-full flex flex-row h-[60vh]">
-        <div id="content-left" class="w-1/2 z-1">
-            <h1 class="typewrite mt-[15%] ml-[8%] w-[90%] leading-[1] text-[4.5vw] font-bold"
+<main class="w-full h-full flex flex-col items-center">
+    <div id="content-top" class="grid grid-cols-2 pt-[2%] h-[60dvh]">
+        <div id="content-left" class="w-full z-1">
+            <h1 id="content-text-main" class="typewrite w-[90%] leading-[1] font-bold"
                 style="text-shadow: 0 0 20px rgba(168,85,247,0.6);"
                 data-speed="50" data-delay="5000" data-cursor="false"
                 data-texts='["Easily pick your next beatmap with<br>More Beatmaps Info",
@@ -59,28 +59,24 @@
             </h1>
         </div>
 
-        <div id="content-right" class="w-1/2  flex justify-end items-start">
-            <div class="w-[100%] h-[50%] ds-bg-red-400 relative">
+        <div id="content-right" class="w-full  flex justify-center items-center">
+            <div class="w-[100%] h-[100%] ds-bg-red-400 relative">
                 <div id="cards-animated-block" class="rotate-10 w-[95%] mt-[25%]">
 
                     <div class="card-stack w-full h-full absolute z-10 bottom-[200%]" data-switch-time="5105"
                          data-animation-time="2000">
-                        <div class="card deep-info-block left-1/2 -translate-x-1/2 font-bold text-[1vw] inline-block whitespace-nowrap rounded-[1vw] border-white border-[0.2vw]">
-                            Aim diff: 3.3, Speed diff: 3.0, Circles: 1526, Sliders: 438, Speed note count: 1338.5, FL
-                            Diff: 4.29
+                        <div class="card deep-info-block">
+                            Aim diff: 3.3, Speed diff: 3.0, Circles: 1526, Sliders: 438, Speed note count: 1338.5, FL Diff: 4.29
                         </div>
-                        <div class="card deep-info-block left-1/2 -translate-x-1/2 font-bold text-[1vw] inline-block whitespace-nowrap rounded-[1vw] border-white border-[0.2vw]">
-                            Aim diff: 4.4, Speed diff: 2.6, Circles: 353, Sliders: 128, Speed note count: 386.2, FL
-                            Diff: 3.33
+                        <div class="card deep-info-block">
+                            Aim diff: 4.4, Speed diff: 2.6, Circles: 353, Sliders: 128, Speed note count: 386.2, FL Diff: 3.33
                         </div>
-                        <div class="card deep-info-block left-1/2 -translate-x-1/2 font-bold text-[1vw] inline-block whitespace-nowrap rounded-[1vw] border-white border-[0.2vw]">
-                            Aim diff: 3.5, Speed diff: 3.5, Circles: 2232, Sliders: 604, Speed note count: 1123.4, FL
-                            Diff: 5.00
+                        <div class="card deep-info-block">
+                            Aim diff: 3.5, Speed diff: 3.5, Circles: 2232, Sliders: 604, Speed note count: 1123.4, FL Diff: 5.00
                         </div>
                     </div>
 
-                    <div class="card-stack w-[90%] h-full z-100"
-                         style="box-shadow: 3vw 5vw 9vw 4vw rgba(168,85,247,0.6);"
+                    <div id="beatmaps-cards" class="card-stack w-[90%] h-full z-100"
                          data-switch-time="5105" data-animation-time="2000">
                         <img class="card w-full select-none opacity-95 transition-transform duration-700 ease-in-out"
                              src="src/assets/images/beatmap-card.png" alt="Beatmapset card">
@@ -90,14 +86,14 @@
                              src="src/assets/images/beatmap-card3.png" alt="Beatmapset card">
                     </div>
 
-                    <h1 class="typewrite-cards text-[1.6vw] absolute left-[85%] top-[30%] text-responsive max-w-[60%]
-                 z-50  text-white" id="pp-text"
+                    <h1 id="pp-text" class="typewrite-cards absolute left-[85%] top-[30%]
+                     text-responsive max-w-[60%] z-50  text-white"
                         data-delay="3850"
                         data-speed="120" data-cursor="false"
                         data-texts='["506pp", "588pp", "763pp"]'>
                     </h1>
 
-                    <h1 class="typewrite-cards text-[1.3vw] max-w-[65%]
+                    <h1 id="beatmaps-params" class="typewrite-cards max-w-[65%]
                  z-50 translate-y-[370%] translate-x-[33%] text-white"
                         data-delay="3350"
                         data-speed="17" data-cursor="false"
@@ -112,14 +108,14 @@
     </div>
 
     <div class="flex w-full justify-center mt-10">
-        <button class="flex justify-between items-center bg-purple-400 px-3 ph-2 rounded-[1rem] w-80
+        <button class="animated-btn flex justify-between items-center bg-purple-400 px-3 ph-2 rounded-[1rem] w-80
         font-bold shadow-[0_4px_30px_rgba(168,85,247,0.6)]">
             <img src="/src/assets/images/chromium-logo.png" width="40" height="40" alt="firefox logo">
             <span class="ml-2 text-[1.2rem]">Chromium Browsers download</span>
             <i class="fa-solid fa-download text-[1.5rem] ml-2"></i>
         </button>
 
-        <button class="flex justify-between items-center bg-purple-400 px-3 ph-2 rounded-[1rem] ml-[4%] w-80
+        <button class="animated-btn flex justify-between items-center bg-purple-400 px-3 ph-2 rounded-[1rem] ml-[4%] w-80
         font-bold shadow-[0_4px_30px_rgba(168,85,247,0.6)]">
             <img src="/src/assets/images/firefox-logo.png" width="40" height="40" alt="firefox logo">
             <span class="ml-2 text-[1.2rem]">Firefox download</span>

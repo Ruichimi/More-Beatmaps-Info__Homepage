@@ -1,5 +1,43 @@
 @import "tailwindcss";
 
+
+html {
+    --base-content-size-factor: 0.9;
+
+    --base-content-size: calc(var(--base-content-size-factor) * 1vw);
+}
+
+#content-top {
+    width: calc(var(--base-content-size-factor) * 100%);
+}
+
+#content-text-main {
+    font-size: calc(var(--base-content-size) * 4);
+    margin-bottom: calc(var(--base-content-size) * 3);
+}
+
+#beatmaps-cards {
+        box-shadow:
+                calc(3 * var(--base-content-size))
+                calc(5 * var(--base-content-size))
+                calc(9 * var(--base-content-size))
+                calc(4 * var(--base-content-size))
+                rgba(168,85,247,0.6);
+}
+
+#beatmaps-params {
+    font-size: calc(var(--base-content-size) * 1.27);
+}
+
+#pp-text {
+    font-size: calc(var(--base-content-size) * 1.6);
+    backface-visibility: hidden;
+}
+
+#content-left {
+    padding-top: calc(var(--base-content-size) * 6);
+}
+
 @layer utilities {
 }
 
@@ -7,10 +45,17 @@
     backface-visibility: hidden;
 }
 
-#pp-text {
-    backface-visibility: hidden;
-}
 .deep-info-block {
-    background: linear-gradient(180deg,#7c35fd,#9039f4,#a323ee);
-    padding: 0.595vw 0.893vw;
+    @apply
+        relative
+        left-1/2 -translate-x-1/2
+        inline-block whitespace-nowrap
+        font-bold
+        border border-white;
+
+    border-width: calc(var(--base-content-size) * 0.2);
+    background: linear-gradient(180deg, #7c35fd, #9039f4, #a323ee);
+    padding: calc(var(--base-content-size) * 0.595) calc(var(--base-content-size) * 0.893);
+    font-size: calc(var(--base-content-size) * 1.1);
+    border-radius: calc(var(--base-content-size) * 1.1);
 }
