@@ -1,10 +1,13 @@
 @import "tailwindcss";
 
-
 html {
     --base-content-size-factor: 0.9;
 
     --base-content-size: calc(var(--base-content-size-factor) * 1vw);
+
+    --duration: 3.5s;
+    --max-scale: 1.5;
+    --easing: cubic-bezier(.22,.9,.35,1);
 }
 
 #content-top {
@@ -12,7 +15,8 @@ html {
 }
 
 #content-text-main {
-    font-size: calc(var(--base-content-size) * 4);
+    font-weight: bolder;
+    font-size: calc(var(--base-content-size) * 5);
     margin-bottom: calc(var(--base-content-size) * 3);
 }
 
@@ -58,4 +62,57 @@ html {
     padding: calc(var(--base-content-size) * 0.595) calc(var(--base-content-size) * 0.893);
     font-size: calc(var(--base-content-size) * 1.1);
     border-radius: calc(var(--base-content-size) * 1.1);
+}
+
+
+
+.btn-pulse {
+    will-change: transform, opacity;
+    animation: growFade var(--duration) var(--easing) infinite;
+}
+
+.animated-btn {
+    position: relative;
+    overflow: visible;
+}
+
+.animated-btn::before {
+    content: "";
+    position: absolute;
+    inset: -10px;
+    z-index: -1;
+
+    background: radial-gradient(
+            ellipse at center,
+            rgba(140, 0, 255, 0.4) 0%,
+            rgba(140, 0, 255, 0.2) 40%,
+            rgba(140, 0, 255, 0.1) 70%,
+            rgba(140, 0, 255, 0) 100%
+    );
+
+    border-radius: calc(1rem + 10px);
+
+    filter: blur(1px);
+    will-change: transform, opacity, filter;
+
+    animation: growFade var(--duration) var(--easing) infinite;
+    pointer-events: none;
+}
+
+
+@keyframes growFade {
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+
+    70% {
+        transform: scale(calc(var(--max-scale) * 0.9));
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(var(--max-scale));
+        opacity: 0;
+    }
 }
