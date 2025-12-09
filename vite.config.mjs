@@ -1,8 +1,10 @@
-import {defineConfig} from "vite";
+import { defineConfig } from "vite";
 import path from "path";
-import tailwindcss from '@tailwindcss/vite'
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
+    root: path.resolve(__dirname, "src"),
+
     resolve: {
         alias: {
             "@": path.resolve(__dirname, "src"),
@@ -10,7 +12,19 @@ export default defineConfig({
             "@scss": path.resolve(__dirname, "src/styles/scss"),
         },
     },
+
     plugins: [
         tailwindcss(),
     ],
+
+    build: {
+        outDir: path.resolve(__dirname, "dist"),
+        emptyOutDir: true,
+        rollupOptions: {
+            input: {
+                main: path.resolve(__dirname, "src/index.html"),
+                feedback: path.resolve(__dirname, "src/feedback.html"),
+            },
+        },
+    },
 });
