@@ -73,7 +73,6 @@ html {
 
 .animated-btn {
     position: relative;
-    overflow: visible;
 }
 
 .animated-btn::before {

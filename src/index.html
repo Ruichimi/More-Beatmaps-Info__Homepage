@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
-<body class="text-white bg-[#210138] w-screen min-h-screen flex flex-col">
+<body class="text-white bg-[#210138] w-screen min-h-screen flex flex-col overflow-x-hidden">
 
 <div class="w-full flex justify-center">
     <nav class="w-[80%] flex items-start mt-2">
@@ -53,7 +53,8 @@
     </nav>
 </div>
 
-<main class="w-full h-full flex flex-col items-center">
+
+<main class="w-full flex flex-col items-center mb-100">
     <div id="content-top" class="grid grid-cols-2 pt-[2%] h-[60dvh]">
         <div id="content-left" class="w-full z-1">
             <h1 id="content-text-main" class="typewrite w-[90%] leading-[1] font-bold"
@@ -72,13 +73,16 @@
                     <div class="card-stack w-full h-full absolute z-10 bottom-[200%]" data-switch-time="5105"
                          data-animation-time="2000">
                         <div class="card deep-info-block">
-                            Aim diff: 3.3, Speed diff: 3.0, Circles: 1526, Sliders: 438, Speed note count: 1338.5, FL Diff: 4.29
+                            Aim diff: 3.3, Speed diff: 3.0, Circles: 1526, Sliders: 438, Speed note count: 1338.5, FL
+                            Diff: 4.29
                         </div>
                         <div class="card deep-info-block">
-                            Aim diff: 4.4, Speed diff: 2.6, Circles: 353, Sliders: 128, Speed note count: 386.2, FL Diff: 3.33
+                            Aim diff: 4.4, Speed diff: 2.6, Circles: 353, Sliders: 128, Speed note count: 386.2, FL
+                            Diff: 3.33
                         </div>
                         <div class="card deep-info-block">
-                            Aim diff: 3.5, Speed diff: 3.5, Circles: 2232, Sliders: 604, Speed note count: 1123.4, FL Diff: 5.00
+                            Aim diff: 3.5, Speed diff: 3.5, Circles: 2232, Sliders: 604, Speed note count: 1123.4, FL
+                            Diff: 5.00
                         </div>
                     </div>
 
@@ -122,7 +126,7 @@
         </button>
 
         <button class="animated-btn flex justify-between items-center bg-purple-400 px-3 ph-2
-         rounded-[1rem] ml-[4%] w-80 h-16 font-bold shadow-[0_4px_30px_rgba(168,85,247,0.6)]">
+         rounded-[1rem] ml-[4%] w-80 font-bold shadow-[0_4px_30px_rgba(168,85,247,0.6)]">
             <img src="assets/images/firefox-logo.png" width="40" height="40" alt="firefox logo">
             <span class="ml-2 text-[1.2rem]">Firefox download</span>
             <i class="fa-solid fa-download text-[1.5rem] ml-2"></i>
@@ -130,48 +134,66 @@
     </div>
 </main>
 
-<footer class="mt-100 w-full border-pink-500 border-0 border-t-3 bg-[#181333]/50 px-20 py-8
-               grid grid-cols-3">
-    <div class="flex items-center">
-        <img src="assets/images/logo.png" width="65" height="65" alt="logo"
-        class="mr-3">
+<footer class="mt-auto w-full border-pink-500 border-0 border-t-3 bg-[#181333]/50
+ px-2 xl:px-20 py-8 grid grid-cols-3 max-xl:grid-cols-2 gap-6 justify-self-end">
+
+    <div class="flex items-center max-xl:row-start-1 max-md:col-span-2">
+        <img src="assets/images/logo.png" width="65" height="65" alt="logo" class="mr-3"/>
         <div class="flex flex-col">
             <h1 class="text-4xl">More Beatmaps Info</h1>
             <p class="ml-[0.150rem] text-gray-300">Made with love</p>
         </div>
     </div>
-    <div class="flex flex-col items-center justify-end text-gray-300">
+
+    <div class="flex flex-col max-xl:mb-auto max-xl:items-start items-center justify-end text-gray-300 text-[1rem] max-xl:col-start-1 max-xl:row-start-2">
         <div>Open-source project under the AGPL-3.0 license.</div>
         <div>&copy; 2025 All rights reserved</div>
     </div>
 
-    <div class="flex justify-end items-center w-full">
-        <div class="flex flex-col justify-start">
+    <div class="flex justify-end items-start w-full max:md:cal-start-1 max-xl:col-start-2 max-xl:row-start-1 max-md:row-start-2">
+        <div class="flex flex-col">
             <div class="flex justify-center items-center font-bold">
-                <i class="fa-brands fa-github mr-1"></i>
-                GitHub source
+                <i class="fa-brands fa-github mr-1"></i>GitHub source
             </div>
             <ul class="mt-2">
-                <li><a href="https://github.com/Ruichimi/More-Beatmaps-Info"
-                       class="hover:underline">Extension</a></li>
-                <li><a href="https://github.com/Ruichimi/More-Beatmaps-Info__Server"
-                       class="hover:underline">Server</a></li>
-                <li><a href="https://github.com/Ruichimi/More-Beatmaps-Info__Homepage"
-                       class="hover:underline">Homepage</a></li>
+                <li>
+                    <a href="https://github.com/Ruichimi/More-Beatmaps-Info"
+                       class="hover:underline">Extension
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/Ruichimi/More-Beatmaps-Info__Server"
+                       class="hover:underline">Server
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/Ruichimi/More-Beatmaps-Info__Homepage"
+                       class="hover:underline">Homepage
+                    </a>
+                </li>
             </ul>
         </div>
-        <div class="flex flex-col mr-30 ml-20">
+
+        <div class="flex flex-col xl:ml-20 ml-8 mt-auto">
             <div class="font-bold">Resources</div>
             <ul class="mt-2">
-                <li><a href="feedback.html" class="hover:underline">Feedback</a></li>
-                <li><a href="privacy.html" class="hover:underline">Privacy</a></li>
-                <li><a href="https://osu.ppy.sh/community/forums/topics/2100298?n=1"
-                       target="_blank" rel="noopener noreferrer"
-                       class="hover:underline">Discussion</a></li>
+                <li>
+                    <a href="feedback.html" class="hover:underline">Feedback</a>
+                </li>
+                <li>
+                    <a href="privacy.html" class="hover:underline">Privacy</a>
+                </li>
+                <li>
+                    <a href="https://osu.ppy.sh/community/forums/topics/2100298?n=1"
+                       target="_blank" rel="noopener noreferrer" class="hover:underline">
+                        Discussion
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
 </footer>
+
 
 </body>
 <script type="module" src="js/main.js"></script>
