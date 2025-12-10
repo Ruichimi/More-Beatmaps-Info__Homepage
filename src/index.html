@@ -12,7 +12,7 @@
 <body class="text-white bg-[#210138] w-screen min-h-screen flex flex-col overflow-x-hidden">
 
 <div class="w-full flex justify-center">
-    <nav class="w-[80%] flex items-start mt-2">
+    <nav class="max-sm:w-[98%] w-[80%] max-md:w-[95%] flex items-start mt-2">
         <div class="p-[10px] bg-[#181333] relative rounded-full rounded-tr-none border-[3px] border-pink-500"
              id="navbar-logo">
             <img src="assets/images/logo.png" width="84" height="84" alt="logo">
@@ -55,7 +55,7 @@
 
 
 <main class="w-full flex flex-col items-center mb-100">
-    <div id="content-top" class="grid grid-cols-2 pt-[2%] h-[60dvh]">
+    <div id="content-top" class="grid grid-cols-2 pt-[2%] h-[27vw] max-md:h-[35vw]">
         <div id="content-left" class="w-full z-1">
             <h1 id="content-text-main" class="typewrite w-[90%] leading-[1] font-bold"
                 style="text-shadow: 0 0 20px rgba(168,85,247,0.6);"
@@ -117,16 +117,16 @@
         </div>
     </div>
 
-    <div class="flex w-full justify-center mt-10">
+    <div class="flex w-full justify-center mt-10 max-sm:flex-col max-sm:items-center">
         <button class="animated-btn flex justify-between items-center bg-purple-400 px-3 ph-2
-         rounded-[1rem] w-80 font-bold shadow-[0_4px_30px_rgba(168,85,247,0.6)]">
+         rounded-[1rem] w-80 font-bold shadow-[0_4px_30px_rgba(168,85,247,0.6)] max-sm:h-15 ">
             <img src="assets/images/chromium-logo.png" width="40" height="40" alt="firefox logo">
             <span class="ml-2 text-[1.2rem]">Chromium Browsers download</span>
             <i class="fa-solid fa-download text-[1.5rem] ml-2"></i>
         </button>
 
         <button class="animated-btn flex justify-between items-center bg-purple-400 px-3 ph-2
-         rounded-[1rem] ml-[4%] w-80 font-bold shadow-[0_4px_30px_rgba(168,85,247,0.6)]">
+         rounded-[1rem] sm:ml-[4%] max-sm:mt-4 max-sm:h-15 w-80 font-bold shadow-[0_4px_30px_rgba(168,85,247,0.6)]">
             <img src="assets/images/firefox-logo.png" width="40" height="40" alt="firefox logo">
             <span class="ml-2 text-[1.2rem]">Firefox download</span>
             <i class="fa-solid fa-download text-[1.5rem] ml-2"></i>
@@ -135,7 +135,7 @@
 </main>
 
 <footer class="mt-auto w-full border-pink-500 border-0 border-t-3 bg-[#181333]/50
- px-2 xl:px-20 py-8 grid grid-cols-3 max-xl:grid-cols-2 gap-6 justify-self-end">
+ px-2 2xl:px-20 md:px-10 sm:px-8 py-8 grid grid-cols-3 max-xl:grid-cols-2 gap-y-6 justify-self-end">
 
     <div class="flex items-center max-xl:row-start-1 max-md:col-span-2">
         <img src="assets/images/logo.png" width="65" height="65" alt="logo" class="mr-3"/>
