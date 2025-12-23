@@ -10,6 +10,12 @@ html {
     --easing: cubic-bezier(.22,.9,.35,1);
 }
 
+@media (max-width: 640px) {
+    html {
+        --base-content-size-factor: 0.95;
+    }
+}
+
 #content-top {
     width: calc(var(--base-content-size-factor) * 100%);
 }
