@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/images/logo.png" type="image/x-icon">
     <title>More Beatmaps Info</title>
     <link href="styles/css/main.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -53,7 +53,7 @@
 <main class="w-full flex flex-col items-center mb-100 overflow-hidden">
     <div id="content-top" class="grid grid-cols-2 pt-[2%] h-[27vw] max-md:h-[35vw] max-md:mb-30">
         <div id="content-left" class="w-full z-1">
-            <h1 id="content-text-main" class="typewrite w-[90%] leading-[1] font-bold"
+            <h1 id="content-text-main" class="typewrite w-[93%] leading-[1] font-bold"
                 style="text-shadow: 0 0 20px rgba(168,85,247,0.6);"
                 data-speed="50" data-delay="5000" data-cursor="false"
                 data-texts='["Easily pick your next beatmap with<br>More Beatmaps Info",
@@ -113,20 +113,25 @@
         </div>
     </div>
 
-    <div class="flex w-full justify-center mt-10 max-sm:flex-col max-sm:items-center mb-10">
-        <button class="animated-btn flex justify-between items-center bg-purple-400 px-3 ph-2
-         rounded-[1rem] w-80 font-bold shadow-[0_4px_30px_rgba(168,85,247,0.6)] max-sm:h-15 ">
-            <img src="assets/images/chromium-logo.png" width="40" height="40" alt="firefox logo">
-            <span class="ml-2 text-[1.2rem]">Chromium Browsers download</span>
-            <i class="fa-solid fa-download text-[1.5rem] ml-2"></i>
-        </button>
+    <div class="flex w-full justify-center mt-13 max-sm:flex-col max-sm:items-center mb-10">
+        <a href="https://chromewebstore.google.com/detail/osu-more-beatmaps-info/kcmncagpgeadocepdaobeeifhlgfibof" target="_blank"
+           class="animated-btn flex justify-between items-center bg-purple-400 px-3 ph-2 cursor-pointer
+          rounded-[1rem] w-80 font-bold shadow-[0_4px_30px_rgba(168,85,247,0.6)] max-sm:h-15">
 
-        <button class="animated-btn flex justify-between items-center bg-purple-400 px-3 ph-2
-         rounded-[1rem] sm:ml-[4%] max-sm:mt-4 max-sm:h-15 w-80 font-bold shadow-[0_4px_30px_rgba(168,85,247,0.6)]">
+            <img src="assets/images/chromium-logo.png" width="40" height="40" alt="chromium logo">
+            <span class="ml-2 text-[1.2rem] text-center">Chromium Browsers download</span>
+            <i class="fa-solid fa-download text-[1.5rem] ml-2"></i>
+        </a>
+
+
+        <a href="https://addons.mozilla.org/ru/firefox/addon/osu-more-beatmaps-info/" target="_blank"
+           class="animated-btn flex justify-between items-center bg-purple-400 px-3 ph-2 cursor-pointer
+          rounded-[1rem] sm:ml-[4%] max-sm:mt-4 max-sm:h-15 w-80 font-bold shadow-[0_4px_30px_rgba(168,85,247,0.6)]">
+
             <img src="assets/images/firefox-logo.png" width="40" height="40" alt="firefox logo">
             <span class="ml-2 text-[1.2rem]">Firefox download</span>
             <i class="fa-solid fa-download text-[1.5rem] ml-2"></i>
-        </button>
+        </a>
     </div>
 </main>
 

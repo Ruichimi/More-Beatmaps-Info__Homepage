@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 html {
-    --base-content-size-factor: 0.9;
+    --base-content-size-factor: 0.93;
 
     --base-content-size: calc(var(--base-content-size-factor) * 1vw);
 
@@ -22,7 +22,7 @@ html {
 
 #content-text-main {
     font-weight: bolder;
-    font-size: calc(var(--base-content-size) * 5);
+    font-size: calc(var(--base-content-size) * 4.9);
     margin-bottom: calc(var(--base-content-size) * 3);
 }
 
