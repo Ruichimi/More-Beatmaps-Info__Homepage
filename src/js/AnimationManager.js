@@ -22,7 +22,6 @@ class AnimationManager {
         setInterval(() => {
             if (!this.currentBlock) return;
 
-            // сброс всех анимаций карточек
             this.cardAnimInstances.forEach(anim => anim.resetStyles());
 
             const newBlock = this.resetBlock();
@@ -46,7 +45,6 @@ class AnimationManager {
     cardStacksInit(container) {
         const cardStacks = container.querySelectorAll(".card-stack");
 
-        // очищаем старые анимации
         this.cardAnimInstances.forEach(anim => anim.stop());
         this.cardAnimInstances = [];
 
