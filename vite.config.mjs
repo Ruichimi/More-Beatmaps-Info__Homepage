@@ -24,6 +24,7 @@ export default defineConfig({
             input: {
                 main: path.resolve(__dirname, "src/index.html"),
                 feedback: path.resolve(__dirname, "src/feedback.html"),
+                privacy: path.resolve(__dirname, "src/privacy.html"),
             },
         },
     },
