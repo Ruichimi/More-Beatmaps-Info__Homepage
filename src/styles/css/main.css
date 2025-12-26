@@ -7,7 +7,7 @@ html {
 
     --duration: 3.5s;
     --max-scale: 1.5;
-    --easing: cubic-bezier(.22,.9,.35,1);
+    --easing: cubic-bezier(.22, .9, .35, 1);
 }
 
 @media (max-width: 640px) {
@@ -27,12 +27,7 @@ html {
 }
 
 #beatmaps-cards {
-        box-shadow:
-                calc(3 * var(--base-content-size))
-                calc(5 * var(--base-content-size))
-                calc(9 * var(--base-content-size))
-                calc(4 * var(--base-content-size))
-                rgba(168,85,247,0.6);
+    box-shadow: calc(3 * var(--base-content-size)) calc(5 * var(--base-content-size)) calc(9 * var(--base-content-size)) calc(4 * var(--base-content-size)) rgba(168, 85, 247, 0.6);
 }
 
 #beatmaps-params {
@@ -55,30 +50,53 @@ html {
     backface-visibility: hidden;
 }
 
-.deep-info-block {
-    @apply
+@layer components {
+    .deep-info-block {
+        @apply
         relative
         left-1/2 -translate-x-1/2
         inline-block whitespace-nowrap
         font-bold
         border border-white;
 
-    border-width: calc(var(--base-content-size) * 0.2);
-    background: linear-gradient(180deg, #7c35fd, #9039f4, #a323ee);
-    padding: calc(var(--base-content-size) * 0.595) calc(var(--base-content-size) * 0.893);
-    font-size: calc(var(--base-content-size) * 1.1);
-    border-radius: calc(var(--base-content-size) * 1.1);
+        border-width: calc(var(--base-content-size) * 0.2);
+        background: linear-gradient(180deg, #7c35fd, #9039f4, #a323ee);
+        padding: calc(var(--base-content-size) * 0.595) calc(var(--base-content-size) * 0.893);
+        font-size: calc(var(--base-content-size) * 1.1);
+        border-radius: calc(var(--base-content-size) * 1.1);
+    }
 }
-
-
 
 .btn-pulse {
     will-change: transform, opacity;
     animation: growFade var(--duration) var(--easing) infinite;
 }
 
-.animated-btn {
-    position: relative;
+@layer components {
+    .animated-btn {
+        @apply
+        relative
+        flex
+        justify-between
+        items-center
+        bg-purple-400
+        px-3
+        cursor-pointer
+        rounded-[1rem]
+        font-bold
+        shadow-[0_4px_30px_rgba(168,85,247,0.6)]
+        max-sm:h-15
+        w-80;
+
+        background: linear-gradient(150deg, #b655f7, #7c35fd);
+        transition: background 0.5s ease,
+        transform 0.5s ease;
+    }
+}
+
+.animated-btn:hover {
+    background: linear-gradient(150deg, #ab33fa, #7014d3);
+    transform: translateY(-4px);
 }
 
 .animated-btn::before {
