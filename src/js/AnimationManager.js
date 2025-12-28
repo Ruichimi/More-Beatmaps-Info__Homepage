@@ -1,7 +1,7 @@
 import ImageSwitcherAnimator from "@/js/imageSwitcherAnimator.js";
 import TypeWriter from "@/js/typeTextAnimator.js";
 
-class AnimationManager {
+export default class AnimationManager {
     constructor() {
         this.cardAnimInstances = [];
         this.currentTypeWriterInstances = [];
@@ -80,8 +80,3 @@ class AnimationManager {
         });
     }
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-    new AnimationManager().init();
-});
-
