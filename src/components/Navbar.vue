@@ -53,10 +53,14 @@ onMounted(() => {
 
 <template>
   <nav class="max-sm:w-[98%] w-[80%] max-md:w-[95%] flex items-start mt-3 mx-auto">
-    <div class="p-[10px] bg-[#181333] relative rounded-full rounded-tr-none border-[3px] border-pink-500"
-         ref="navbarLogo">
+    <router-link
+        to="/"
+        class="p-[10px] bg-[#181333] relative rounded-full rounded-tr-none border-[3px] border-pink-500"
+        ref="navbarLogo"
+    >
       <img src="../assets/images/logo.png" width="84" height="84" alt="logo">
-    </div>
+    </router-link>
+
     <div ref="navbarBar"
          class="flex-1 flex bg-[#181333] rounded-[30px] rounded-tl-none rounded-bl-none border-[3px] border-l-0 border-pink-500">
       <div ref="borderHider" class="self-stretch relative w-[3px] right-[3px] bg-[#181333] z-100 "></div>
@@ -111,7 +115,4 @@ onMounted(() => {
 </template>
 
 <style scoped>
-nav {
-  color: white;
-}
 </style>
