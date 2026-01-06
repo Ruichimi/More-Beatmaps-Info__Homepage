@@ -1,5 +1,10 @@
+<script setup>
+import Navbar from '@/components/Navbar.vue'
+</script>
+
 <template>
-  <div class="min-h-screen bg-[radial-gradient(circle_at_top,#3b0b7a_0%,#1a012f_70%)] text-white">
+  <div class="bg-[radial-gradient(circle_at_top,#3b0b7a_0%,#1a012f_70%)] text-white flex-1">
+    <Navbar />
     <main class="flex justify-center px-4 max-md:px-2 pt-14 max-md:pt-6 pb-32">
       <div class="w-full max-w-3xl rounded-[28px] bg-[rgba(40,0,80,0.55)] backdrop-blur-xl p-14
     max-md:p-5 max-md:py-8 max-md:rounded-[16px]
@@ -61,6 +66,3 @@
     </main>
   </div>
 </template>
-
-<script setup>
-</script>

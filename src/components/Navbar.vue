@@ -52,7 +52,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <nav class="max-sm:w-[98%] w-[80%] max-md:w-[95%] flex items-start mt-3 mx-auto">
+  <nav class="max-sm:w-[98%] w-[80%] max-md:w-[95%] flex items-start pt-3 mx-auto">
     <router-link
         to="/"
         class="p-[10px] bg-[#181333] relative rounded-full rounded-tr-none border-[3px] border-pink-500"

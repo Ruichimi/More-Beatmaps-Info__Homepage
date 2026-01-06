@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <footer class="mt-auto w-full border-pink-500 border-0 border-t-3 bg-[#181333]/50 items-start
+  <footer class="mt-full w-full border-pink-500 border-0 border-t-3 bg-[#181333]/50 items-start
  px-2 2xl:px-20 md:px-10 sm:px-8 py-8 grid grid-cols-3 max-xl:grid-cols-2 gap-y-6 justify-self-end">
 
     <div class="flex items-center h-full max-xl:row-start-1 max-md:col-span-2">

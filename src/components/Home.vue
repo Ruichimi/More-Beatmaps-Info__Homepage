@@ -1,6 +1,7 @@
 <script setup>
 import { onMounted } from "vue";
 import AnimationManager from "../js/AnimationManager";
+import Navbar from '@/components/Navbar.vue'
 
 let animationManager;
 
@@ -11,6 +12,7 @@ onMounted(() => {
 </script>
 
 <template>
+  <Navbar />
   <div class="text-white  w-screen min-h-screen flex flex-col max-md:overflow-hidden">
 
     <main class="w-full flex flex-col items-center mb-15 md:mb-40 lg:mb-60 xl:mb-80 max-md:overflow-hidden">
