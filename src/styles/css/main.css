@@ -10,6 +10,10 @@ html {
     --easing: cubic-bezier(.22, .9, .35, 1);
 }
 
+body {
+    background-color: #210138;
+}
+
 @media (max-width: 640px) {
     html {
         --base-content-size-factor: 0.95;

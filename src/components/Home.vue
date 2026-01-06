@@ -1,58 +1,5 @@
 <template>
-  <div class="text-white bg-[#210138] w-screen min-h-screen flex flex-col overflow-x-hidden">
-    <nav class="max-sm:w-[98%] w-[80%] max-md:w-[95%] flex items-start mt-2 mx-auto">
-      <div class="p-[10px] bg-[#181333] relative rounded-full rounded-tr-none border-[3px] border-pink-500"
-           id="navbar-logo">
-        <img src="../assets/images/logo.png" width="84" height="84" alt="logo">
-      </div>
-      <div id="navbar-bar"
-           class="flex-1 flex bg-[#181333] rounded-[30px] rounded-tl-none rounded-bl-none border-[3px] border-l-0 border-pink-500">
-        <div id="border-hider" class="self-stretch relative w-[3px] right-[3px] bg-[#181333] z-100 "></div>
-        <div class="w-full h-full flex justify-end items-center px-3 py-[12px]">
-          <ul class="hidden md:flex space-x-6 items-center mr-3">
-            <li>
-              <router-link to="/feedback" class="hover:text-gray-300 text-xl">Feedback</router-link>
-            </li>
-
-            <li>
-              <router-link to="/privacy" class="hover:text-gray-300 text-xl">Privacy</router-link>
-            </li>
-
-            <li>
-              <a href="https://osu.ppy.sh/community/forums/topics/2100298?n=1"
-                   class="hover:text-gray-300 text-xl"
-                   target="_blank" rel="noopener noreferrer">Discussion</a>
-            </li>
-          </ul>
-
-          <ul class="hidden flex-col mx-auto rounded-[20px] bg-[#181333]" id="mobile-menu">
-            <li><router-link to="/feedback" class="block px-4 py-2 hover:bg-[#271e46] rounded">
-              Feedback</router-link>
-            </li>
-
-            <li>
-              <router-view to="/privacy" class="block px-4 py-2 hover:bg-[#271e46] rounded">
-              Privacy</router-view>
-            </li>
-
-            <li>
-              <a href="https://osu.ppy.sh/community/forums/topics/2100298?n=1"
-                   target="_blank" rel="noopener noreferrer"
-                   class="block px-4 py-2 hover:bg-[#271e46] rounded">Discussion</a>
-            </li>
-          </ul>
-
-          <div class="md:hidden flex justify-center">
-            <button id="menu-btn" class="focus:outline-none">
-              <svg class="w-6 h-6" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M4 6h16M4 12h16M4 18h16"/>
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </nav>
+  <div class="text-white  w-screen min-h-screen flex flex-col overflow-x-hidden">
 
     <main class="w-full flex flex-col items-center mb-15 md:mb-40 lg:mb-60 xl:mb-80 overflow-hidden">
       <div id="content-top" class="grid grid-cols-2 pt-[2%] h-[27vw] max-md:h-[35vw]">
@@ -202,7 +149,7 @@
 </template>
 
 <script setup>
-import { onMounted} from "vue";
+import { onMounted } from "vue";
 
 import NavbarController from '../js/navbarController.js';
 import AnimationManager from "../js/AnimationManager";
