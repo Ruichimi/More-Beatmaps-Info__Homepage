@@ -54,7 +54,6 @@ async function submit() {
 </script>
 
 <template>
-  <Navbar/>
   <div class="flex justify-center py-20 px-4">
     <div
         class="w-full max-w-xl rounded-2xl border border-pink-500/40

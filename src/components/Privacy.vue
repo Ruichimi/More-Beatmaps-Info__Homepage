@@ -3,9 +3,7 @@ import Navbar from '@/components/Navbar.vue'
 </script>
 
 <template>
-  <div class="bg-[radial-gradient(circle_at_top,#3b0b7a_0%,#1a012f_70%)] text-white flex-1">
-    <Navbar />
-    <main class="flex justify-center px-4 max-md:px-2 pt-14 max-md:pt-6 pb-32">
+    <main class="flex justify-center px-4 max-md:px-2 pt-6 max-md:pt-6 pb-32">
       <div class="w-full max-w-3xl rounded-[28px] bg-[rgba(40,0,80,0.55)] backdrop-blur-xl p-14
     max-md:p-5 max-md:py-8 max-md:rounded-[16px]
               shadow-[0_0_0_1px_rgba(255,79,216,0.25),0_0_50px_rgba(255,79,216,0.15)]">
@@ -64,5 +62,4 @@ import Navbar from '@/components/Navbar.vue'
         </div>
       </div>
     </main>
-  </div>
 </template>
