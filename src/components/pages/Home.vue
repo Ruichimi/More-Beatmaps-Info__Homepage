@@ -1,7 +1,8 @@
 <script setup>
 import { onMounted } from "vue";
-import AnimationManager from "../../js/AnimationManager.js";
 
+//TODO: The animation manager is not designed to work with Vue. It works, but there may be bugs. Ideally, it should be rewritten.
+import AnimationManager from "../../js/AnimationManager.js";
 let animationManager;
 
 onMounted(() => {
