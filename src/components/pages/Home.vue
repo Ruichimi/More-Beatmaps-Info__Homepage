@@ -15,7 +15,7 @@ onMounted(() => {
 
     <main class="w-full flex flex-col items-center mb-15 md:mb-40 lg:mb-60 xl:mb-80 max-md:overflow-hidden">
       <div id="content-top" class="grid grid-cols-2 pt-[2%] h-[27vw] max-md:h-[35vw]">
-        <div id="content-left" class="w-full z-1">
+        <div id="content-left" class="w-full z-1 overflow-hidden">
           <h1 id="content-text-main" class="typewrite w-[93%] leading-[1] font-bold"
               style="text-shadow: 0 0 20px rgba(168,85,247,0.6);"
               data-speed="50" data-delay="5000" data-cursor="false"
@@ -32,16 +32,13 @@ onMounted(() => {
               <div class="card-stack w-full h-full absolute z-10 bottom-[200%]" data-switch-time="5105"
                    data-animation-time="2000">
                 <div class="card deep-info-block">
-                  Aim diff: 3.3, Speed diff: 3.0, Circles: 1526, Sliders: 438, Speed note count: 1338.5, FL
-                  Diff: 4.29
+                  Aim diff: 3.3, Speed diff: 3.0, Circles: 1526, Sliders: 438, Speed note count: 1338.5, FL Diff: 4.29
                 </div>
                 <div class="card deep-info-block">
-                  Aim diff: 4.4, Speed diff: 2.6, Circles: 353, Sliders: 128, Speed note count: 386.2, FL
-                  Diff: 3.33
+                  Aim diff: 4.4, Speed diff: 2.6, Circles: 353, Sliders: 128, Speed note count: 386.2, FL Diff: 3.33
                 </div>
                 <div class="card deep-info-block">
-                  Aim diff: 3.5, Speed diff: 3.5, Circles: 2232, Sliders: 604, Speed note count: 1123.4, FL
-                  Diff: 5.00
+                  Aim diff: 3.5, Speed diff: 3.5, Circles: 2232, Sliders: 604, Speed note count: 1123.4, FL Diff: 5.00
                 </div>
               </div>
 
@@ -156,8 +153,10 @@ main {
     left-1/2 -translate-x-1/2
     inline-block whitespace-nowrap
     font-bold
-    border border-white;
+    border border-white
+    overflow-hidden;
 
+    max-width: 120%;
     border-width: calc(var(--base-content-size) * 0.2);
     background: linear-gradient(180deg, #7c35fd, #9039f4, #a323ee);
     padding: calc(var(--base-content-size) * 0.595) calc(var(--base-content-size) * 0.893);

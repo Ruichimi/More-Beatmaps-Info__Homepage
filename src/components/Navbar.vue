@@ -53,13 +53,9 @@ onMounted(() => {
 
 <template>
   <nav class="max-sm:w-[98%] w-[80%] max-md:w-[95%] flex items-start pt-3 mx-auto">
-    <router-link
-        to="/"
-        class="p-[10px] bg-[#181333] relative rounded-full rounded-tr-none border-[3px] border-pink-500"
-        ref="navbarLogo"
-    >
-      <img src="../assets/images/logo.png" width="84" height="84" alt="logo">
-    </router-link>
+    <div ref="navbarLogo" class="p-[10px] bg-[#181333] relative rounded-full rounded-tr-none border-[3px] border-pink-500">
+      <router-link to="/"><img src="../assets/images/logo.png" width="84" height="84" alt="logo"> </router-link>
+    </div>
 
     <div ref="navbarBar"
          class="flex-1 flex bg-[#181333] rounded-[30px] rounded-tl-none rounded-bl-none border-[3px] border-l-0 border-pink-500">

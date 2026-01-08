@@ -53,7 +53,7 @@
             <h2 class="text-pink-300 text-lg font-semibold mb-2">Contact</h2>
             <p class="leading-relaxed text-gray-200">
               If you have any privacy or other extension-related questions, you can contact the developer via
-              <a href="Feedback.vue" class="underline text-blue-500 hover:text-blue-800">this page</a>
+              <router-link to="/Feedback" class="underline text-blue-500 hover:text-blue-800">this page</router-link>
               or <a href="https://github.com/Ruichimi" class="underline text-blue-500 hover:text-blue-800">GitHub</a>.
             </p>
           </section>
