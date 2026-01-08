@@ -51,10 +51,10 @@
         <div class="font-bold">Resources</div>
         <ul class="mt-2">
           <li>
-            <a href="Feedback.vue" class="hover:underline">Feedback</a>
+            <a href="pages/Feedback.vue" class="hover:underline">Feedback</a>
           </li>
           <li>
-            <a href="Privacy.vue" class="hover:underline">Privacy</a>
+            <a href="pages/Privacy.vue" class="hover:underline">Privacy</a>
           </li>
           <li>
             <a href="https://osu.ppy.sh/community/forums/topics/2100298?n=1"

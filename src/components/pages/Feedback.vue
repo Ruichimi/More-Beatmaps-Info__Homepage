@@ -1,6 +1,5 @@
 <script setup>
 import {ref, computed} from 'vue';
-import Navbar from '@/components/Navbar.vue';
 
 const serverUrl = 'https://morebeatmapinfo.com';
 
@@ -123,7 +122,6 @@ async function submit() {
         </div>
       </transition>
 
-      <!-- message -->
       <textarea
           v-model="message"
           rows="4"

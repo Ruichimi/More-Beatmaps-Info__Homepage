@@ -1,7 +1,6 @@
 <script setup>
 import { onMounted } from "vue";
-import AnimationManager from "../js/AnimationManager";
-import Navbar from '@/components/Navbar.vue'
+import AnimationManager from "../../js/AnimationManager.js";
 
 let animationManager;
 
@@ -49,11 +48,11 @@ onMounted(() => {
               <div id="beatmaps-cards" class="card-stack w-[90%] h-full z-100"
                    data-switch-time="5105" data-animation-time="2000">
                 <img class="card w-full select-none opacity-95 transition-transform duration-700 ease-in-out"
-                     src="../assets/images/beatmap-card.png" alt="Beatmapset card">
+                     src="../../assets/images/beatmap-card.png" alt="Beatmapset card">
                 <img class="card w-full select-none opacity-95 transition-transform duration-700 ease-in-out"
-                     src="../assets/images/beatmap-card2.png" alt="Beatmapset card">
+                     src="../../assets/images/beatmap-card2.png" alt="Beatmapset card">
                 <img class="card w-full select-none opacity-95 transition-transform duration-700 ease-in-out"
-                     src="../assets/images/beatmap-card3.png" alt="Beatmapset card">
+                     src="../../assets/images/beatmap-card3.png" alt="Beatmapset card">
               </div>
 
               <h1 id="pp-text" class="typewrite-cards absolute left-[85%] top-[30%]
@@ -81,14 +80,14 @@ onMounted(() => {
         <a href="https://chromewebstore.google.com/detail/osu-more-beatmaps-info/kcmncagpgeadocepdaobeeifhlgfibof"
            target="_blank"
            class="animated-btn">
-          <img src="../assets/images/chromium-logo.png" width="40" height="40" alt="chromium logo">
+          <img src="../../assets/images/chromium-logo.png" width="40" height="40" alt="chromium logo">
           <span class="ml-2 text-[1.2rem] text-center">Chromium Browsers download</span>
           <i class="fa-solid fa-download text-[1.5rem] ml-2"></i>
         </a>
 
         <a href="https://addons.mozilla.org/ru/firefox/addon/osu-more-beatmaps-info/" target="_blank"
            class="animated-btn sm:ml-[4%] max-sm:mt-4 max-sm:h-15">
-          <img src="../assets/images/firefox-logo.png" width="40" height="40" alt="firefox logo">
+          <img src="../../assets/images/firefox-logo.png" width="40" height="40" alt="firefox logo">
           <span class="ml-2 text-[1.2rem]">Firefox download</span>
           <i class="fa-solid fa-download text-[1.5rem] ml-2"></i>
         </a>

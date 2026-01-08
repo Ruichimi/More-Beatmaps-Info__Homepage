@@ -12,7 +12,7 @@ import Footer from '@/components/Footer.vue'
       <span
           v-for="i in 40"
           :key="i"
-          class="absolute h-[5px] w-[5px] animate-pulse rounded-full bg-white/60"
+          class="absolute h-[4px] max-md:w-[2px] w-[4px] max-md:h-[2px] animate-pulse rounded-full bg-white/60"
           :style="{
           top: Math.random() * 100 + '%',
           left: Math.random() * 100 + '%',
