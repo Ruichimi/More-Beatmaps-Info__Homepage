@@ -2,12 +2,20 @@
 import { onMounted } from "vue";
 
 //TODO: The animation manager is not designed to work with Vue. It works, but there may be bugs. Ideally, it should be rewritten.
-import AnimationManager from "../../js/AnimationManager.js";
+import AnimationManager from "@/js/AnimationManager.js";
 let animationManager;
 
-onMounted(() => {
+function initAnimationManager() {
   animationManager = new AnimationManager();
   animationManager.init();
+}
+
+onMounted(() => {
+  if (document.readyState === "complete") {
+    initAnimationManager();
+  } else {
+    window.addEventListener("load", initAnimationManager, { once: true });
+  }
 });
 </script>
 

@@ -61,7 +61,7 @@ onMounted(() => {
 
     <div ref="navbarBar" class="navbar-bg flex-1 flex rounded-[30px]
      rounded-tl-none rounded-bl-none border-[3px] border-l-0 border-pink-500">
-      <div ref="borderHider" class="navbar-bg self-stretch relative w-[3px] right-[3px]  z-100 "></div>
+      <div ref="borderHider" class="navbar-bg self-stretch relative w-[3px] right-[3px] z-100"></div>
       <div class="w-full h-full flex justify-end items-center px-3 py-[12px]">
         <ul class="hidden md:flex space-x-6 items-center mr-3">
           <li>
