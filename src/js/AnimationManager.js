@@ -45,6 +45,11 @@ export default class AnimationManager {
     cardStacksInit(container) {
         const cardStacks = container.querySelectorAll(".card-stack");
 
+        //Remove hidden class which added to prevent the image displaying before the animation starts.
+        cardStacks.forEach(card => {
+            card.classList.remove("hidden");
+        });
+
         this.cardAnimInstances.forEach(anim => anim.stop());
         this.cardAnimInstances = [];
 

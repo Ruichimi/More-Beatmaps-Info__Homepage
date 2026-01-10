@@ -38,7 +38,7 @@ onMounted(() => {
           <div class="w-[100%] h-[100%] ds-bg-red-400 relative">
             <div id="cards-animated-block" class="rotate-10 w-[95%] mt-[25%]">
 
-              <div class="card-stack w-full h-full absolute z-10 bottom-[200%]" data-switch-time="5105"
+              <div class="card-stack w-full h-full absolute z-10 bottom-[200%] hidden" data-switch-time="5105"
                    data-animation-time="2000">
                 <div class="card deep-info-block">
                   Aim diff: 3.3, Speed diff: 3.0, Circles: 1526, Sliders: 438, Speed note count: 1338.5, FL Diff: 4.29
@@ -51,7 +51,7 @@ onMounted(() => {
                 </div>
               </div>
 
-              <div id="beatmaps-cards" class="card-stack w-[90%] h-full z-100"
+              <div id="beatmaps-cards" class="card-stack w-[90%] h-full z-100 hidden"
                    data-switch-time="5105" data-animation-time="2000">
                 <img class="card w-full select-none opacity-95 transition-transform duration-700 ease-in-out"
                      src="../../assets/images/beatmap-card.png" alt="Beatmapset card">
