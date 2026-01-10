@@ -84,15 +84,14 @@ onMounted(() => {
 
       <div class="flex w-full max-sm:mt-30 mt-13 justify-center max-sm:flex-col max-sm:items-center mb-10">
         <a href="https://chromewebstore.google.com/detail/osu-more-beatmaps-info/kcmncagpgeadocepdaobeeifhlgfibof"
-           target="_blank"
-           class="animated-btn">
+           class="animated-btn" target="_blank">
           <img src="../../assets/images/chromium-logo.png" width="40" height="40" alt="chromium logo">
           <span class="ml-2 text-[1.2rem] text-center">Chromium Browsers download</span>
           <i class="fa-solid fa-download text-[1.5rem] ml-2"></i>
         </a>
 
-        <a href="https://addons.mozilla.org/ru/firefox/addon/osu-more-beatmaps-info/" target="_blank"
-           class="animated-btn sm:ml-[4%] max-sm:mt-4 max-sm:h-15">
+        <a href="https://addons.mozilla.org/ru/firefox/addon/osu-more-beatmaps-info/"
+           class="animated-btn sm:ml-[4%] max-sm:mt-4 max-sm:h-15"  target="_blank">
           <img src="../../assets/images/firefox-logo.png" width="40" height="40" alt="firefox logo">
           <span class="ml-2 text-[1.2rem]">Firefox download</span>
           <i class="fa-solid fa-download text-[1.5rem] ml-2"></i>
@@ -172,11 +171,6 @@ main {
     font-size: calc(var(--base-content-size) * 1.1);
     border-radius: calc(var(--base-content-size) * 1.1);
   }
-}
-
-.btn-pulse {
-  will-change: transform, opacity;
-  animation: growFade var(--duration) var(--easing) infinite;
 }
 
 @layer components {

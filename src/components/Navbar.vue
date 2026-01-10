@@ -56,7 +56,8 @@ onMounted(() => {
     <div ref="navbarLogo" class="navbar-bg p-[10px] relative rounded-full
                                  rounded-tr-none border-[3px] border-pink-500">
 
-      <router-link to="/"><img src="../assets/images/logo.png" width="84" height="84" alt="logo"></router-link>
+      <router-link to="/"><img src="../assets/images/logo.png" width="84" height="84" alt="logo"
+                               class="transition-transform duration-150 ease-out hover:scale-102"></router-link>
     </div>
 
     <div ref="navbarBar" class="navbar-bg flex-1 flex rounded-[30px]

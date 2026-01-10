@@ -4,8 +4,8 @@
 <template>
     <main class="flex justify-center px-4 max-md:px-2 pt-6 max-md:pt-6 pb-32">
       <div class="w-full max-w-3xl rounded-[28px] bg-[rgba(40,0,80,0.55)] backdrop-blur-xl p-14
-    max-md:p-5 max-md:py-8 max-md:rounded-[16px]
-              shadow-[0_0_0_1px_rgba(255,79,216,0.25),0_0_50px_rgba(255,79,216,0.15)]">
+                  max-md:p-5 max-md:py-8 max-md:rounded-[16px]
+                  shadow-[0_0_0_1px_rgba(255,79,216,0.25),0_0_50px_rgba(255,79,216,0.15)]">
 
         <h1 class="text-4xl font-bold mb-2">Privacy Policy</h1>
         <p class="text-purple-300 mb-12">Last updated: December 2025</p>
