@@ -53,13 +53,15 @@ onMounted(() => {
 
 <template>
   <nav class="max-sm:w-[98%] w-[80%] max-md:w-[95%] flex items-start pt-3 mx-auto">
-    <div ref="navbarLogo" class="p-[10px] bg-[#181333] relative rounded-full rounded-tr-none border-[3px] border-pink-500">
-      <router-link to="/"><img src="../assets/images/logo.png" width="84" height="84" alt="logo"> </router-link>
+    <div ref="navbarLogo" class="navbar-bg p-[10px] relative rounded-full
+                                 rounded-tr-none border-[3px] border-pink-500">
+
+      <router-link to="/"><img src="../assets/images/logo.png" width="84" height="84" alt="logo"></router-link>
     </div>
 
-    <div ref="navbarBar"
-         class="flex-1 flex bg-[#181333] rounded-[30px] rounded-tl-none rounded-bl-none border-[3px] border-l-0 border-pink-500">
-      <div ref="borderHider" class="self-stretch relative w-[3px] right-[3px] bg-[#181333] z-100 "></div>
+    <div ref="navbarBar" class="navbar-bg flex-1 flex rounded-[30px]
+     rounded-tl-none rounded-bl-none border-[3px] border-l-0 border-pink-500">
+      <div ref="borderHider" class="navbar-bg self-stretch relative w-[3px] right-[3px]  z-100 "></div>
       <div class="w-full h-full flex justify-end items-center px-3 py-[12px]">
         <ul class="hidden md:flex space-x-6 items-center mr-3">
           <li>
@@ -77,7 +79,7 @@ onMounted(() => {
           </li>
         </ul>
 
-        <ul class="hidden flex-col mx-auto rounded-[20px] bg-[#181333]" ref="menu">
+        <ul class="navbar-bg hidden flex-col mx-auto rounded-[20px] " ref="menu">
           <li>
             <router-link to="/feedback" class="block px-4 py-2 hover:bg-[#271e46] rounded">
               Feedback
@@ -111,4 +113,8 @@ onMounted(() => {
 </template>
 
 <style scoped>
+
+.navbar-bg {
+  background-color: #181333;
+}
 </style>

@@ -8,9 +8,9 @@ import Footer from '@/components/Footer.vue'
   <router-view />
   <Footer />
 
-  <div class="pointer-events-none absolute inset-0 overflow-hidden">
+  <div class="pointer-events-none z-[-1] absolute inset-0 overflow-hidden">
       <span
-          v-for="i in 40"
+          v-for="i in 60"
           :key="i"
           class="absolute h-[4px] max-md:w-[2px] w-[4px] max-md:h-[2px] animate-pulse rounded-full bg-white/60"
           :style="{
